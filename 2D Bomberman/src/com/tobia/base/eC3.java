@@ -48,8 +48,8 @@ public class eC3 extends AnimationTimer {
 		
 		//Image
 		try {
-			i1 = new Image(new FileInputStream("src/Images/beatiplanet.png"));
-		}catch(IOException e) {
+			i1 = new Image(getClass().getClassLoader().getResourceAsStream("Images/beatiplanet.png"));
+		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		//clouds init
