@@ -241,12 +241,12 @@ public class Control extends Application{
 			musicThread.setName("MUSIC_THREAD");
 			
 			try {
-				img = new Image(new FileInputStream("src/Images/pixelBomberman.png"));
+				img = new Image(getClass().getClassLoader().getResourceAsStream("Images/pixelBomberman.png"));
 				//img2 = new Image(new FileInputStream("src/Images/flappyBird.png"));
-				img3 = new Image(new FileInputStream("src/Images/boom.png"));
-				img4 = new Image(new FileInputStream("src/Images/smoke.png"));
-				img5 = new Image(new FileInputStream("src/Images/walkingBomb.png"));
-			}catch(IOException e) {
+				img3 = new Image(getClass().getClassLoader().getResourceAsStream("Images/boom.png"));
+				img4 = new Image(getClass().getClassLoader().getResourceAsStream("Images/smoke.png"));
+				img5 = new Image(getClass().getClassLoader().getResourceAsStream("Images/walkingBomb.png"));
+			}catch(Exception e) {
 				e.printStackTrace();
 			}
 		}

@@ -46,8 +46,8 @@ public class SpeedItem implements GameObject{
 		mc.loadWav("speeditem");
 		
 		try {
-			img = new Image(new FileInputStream("src/Images/speeditem.png"));
-		}catch(IOException e) {
+			img = new Image(getClass().getClassLoader().getResourceAsStream("Images/speeditem.png"));
+		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
